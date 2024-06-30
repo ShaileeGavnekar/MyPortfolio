@@ -227,10 +227,14 @@ section{
     display: flex;
 }
 .about-pic{
-    height: 58vh;
+    height: 50vh;
     border-radius: 2rem;
 
 }
+/* .iconedu{
+    justify-content: left;
+    text-align: left;
+} */
 .arrow{
     position: absolute;
     right: -5rem;
@@ -250,6 +254,15 @@ section{
     border: rgb(53,53,53) .1rem solid;
     border-color: rgb(163, 163, 163);
     text-align: center;
+}
+.details-containeredu{
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53,53,53) .1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: left;
 }
 .section-container{
     gap: 4rem;
