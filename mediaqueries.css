@@ -12,7 +12,7 @@
   }
 
 }
-@media screen and(max-width: 1200px){
+@media screen and (max-width: 1200px){
     #home-nav{
         display: none;
     }
@@ -27,14 +27,16 @@
     .section-container{
         display: block;
     }
-    .arrow{
+    .arrow,
+    .icon.arrow{
         display: none;
     }
     .section,
     .section-container{
         height: fit-content;
     }
-    section{
+    section,
+    #experience{
         margin: 0 5%;
     }
     .section_pic-container{
@@ -46,7 +48,7 @@
         margin-top: 0;
     }
 }
-@media screen and(max-width: 600px){
+@media screen and (max-width: 600px){
     #contact,
     footer{
         height: 40vh;
@@ -61,6 +63,12 @@
     footer nav{
         height: fit-content;
         margin-bottom: 2rem;
+    }
+    footer .home-links{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem 1.25rem;
+        font-size: 1.1rem;
     }
     .about-containers,
     .contact-info-upper-container,
@@ -82,7 +90,7 @@
     }
     .nav-links{
         flex-direction: column;
-        gap: .5 rem;
+        gap: .5rem;
         text-align: center;
     }
     .section_pic-container{

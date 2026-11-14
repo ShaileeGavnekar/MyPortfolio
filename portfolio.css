@@ -8,6 +8,8 @@ body{
 }
 html{
     scroll-behavior: smooth;
+    background: white;
+    color-scheme: only light;
 }
 p{
     color: rgb(85, 85, 85);
@@ -300,6 +302,21 @@ article .icon{
     cursor: default;
     gap: 0.5rem;
 }
+.skill-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    list-style: none;
+}
+.skill-list li{
+    padding: 0.4rem 0.9rem;
+    border: rgb(163, 163, 163) 0.1rem solid;
+    border-radius: 2rem;
+    background: rgb(250, 250, 250);
+    color: rgb(53, 53, 53);
+    font-size: 0.95rem;
+}
 /* Projects */
 #projects{
     position: relative;
@@ -326,6 +343,46 @@ article .icon{
 }
 .skills-used{
     font-size: medium;
+}
+/* Project cards share grid rows, so the image, title, tech stack,
+   description and buttons line up horizontally across the cards. */
+@supports (grid-template-rows: subgrid){
+    #projects .about-containers{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 20.25rem), 1fr));
+        gap: 0 2rem;
+        margin-bottom: 0;
+    }
+    #projects .details-container{
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: subgrid;
+        grid-row: span 5;
+        margin-bottom: 2rem;
+    }
+    #projects .details-container > br{
+        display: none;
+    }
+    #projects .article-container{
+        grid-row: 1;
+        align-items: flex-start;
+    }
+    #projects .project-title{
+        grid-row: 2;
+    }
+    #projects .skills-used{
+        grid-row: 3;
+    }
+    #projects .project-content{
+        grid-row: 4;
+    }
+    #projects .btn-container{
+        grid-row: 5;
+        margin-top: 1.5rem;
+    }
+    #projects .project-img{
+        height: auto;
+    }
 }
 /* Contact */
 #contact{
@@ -370,6 +427,7 @@ footer p{
 }
 /* Experience Section */
 #experience {
+    position: relative;
     padding-top: 4vh;
     height: auto;
     margin: 0 10rem;
